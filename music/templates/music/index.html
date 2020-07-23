@@ -1,3 +1,19 @@
+<!--  Loads the path to your static files -->
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" />
+
+<!-- Website Navigation Bar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid"></div>
+
+    <!-- Logo -->
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'music:index' %}">SwayWavy</a>
+    </div>
+</nav>
+
+<!-- Website Body -->>
 {% if all_albums %}
     <h3>Here are my available albums: </h3>
     <ul>          
